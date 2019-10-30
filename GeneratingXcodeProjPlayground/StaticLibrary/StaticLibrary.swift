@@ -1,11 +1,5 @@
-//
-//  StaticLibrary.swift
-//  StaticLibrary
-//
-//  Created by Andrea Cipriani on 30.10.19.
-//  Copyright © 2019 Andrea Cipriani. All rights reserved.
-//
-
-class StaticLibrary {
-
+public class StaticLibrary {
+    public static func execute() {
+        print("I'm a static library")
+    }
 }

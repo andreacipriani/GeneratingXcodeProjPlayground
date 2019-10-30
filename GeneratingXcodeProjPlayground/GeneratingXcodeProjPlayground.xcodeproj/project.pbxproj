@@ -18,6 +18,8 @@
 		68911B162369C54F0088827D /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68911B0F2369C54F0088827D /* Core.framework */; };
 		68911B172369C54F0088827D /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68911B0F2369C54F0088827D /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		68911B1D2369C5680088827D /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68911B1C2369C5680088827D /* NetworkClient.swift */; };
+		68911B252369D15F0088827D /* StaticLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68911B242369D15F0088827D /* StaticLibrary.swift */; };
+		68911B2A2369D22D0088827D /* libStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68911B222369D15F0088827D /* libStaticLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,15 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68911B202369D15F0088827D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +87,8 @@
 		68911B112369C54F0088827D /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		68911B122369C54F0088827D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68911B1C2369C5680088827D /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		68911B222369D15F0088827D /* libStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		68911B242369D15F0088827D /* StaticLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68911B2A2369D22D0088827D /* libStaticLibrary.a in Frameworks */,
 				68911B162369C54F0088827D /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +122,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68911B1F2369D15F0088827D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,7 +139,9 @@
 				68911AF02369C4F00088827D /* GeneratingXcodeProjPlaygroundTests */,
 				68911AFB2369C4F00088827D /* GeneratingXcodeProjPlaygroundUITests */,
 				68911B102369C54F0088827D /* Core */,
+				68911B232369D15F0088827D /* StaticLibrary */,
 				68911ADA2369C4EE0088827D /* Products */,
+				68911B292369D22D0088827D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +152,7 @@
 				68911AED2369C4F00088827D /* GeneratingXcodeProjPlaygroundTests.xctest */,
 				68911AF82369C4F00088827D /* GeneratingXcodeProjPlaygroundUITests.xctest */,
 				68911B0F2369C54F0088827D /* Core.framework */,
+				68911B222369D15F0088827D /* libStaticLibrary.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +196,21 @@
 				68911B1C2369C5680088827D /* NetworkClient.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		68911B232369D15F0088827D /* StaticLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				68911B242369D15F0088827D /* StaticLibrary.swift */,
+			);
+			path = StaticLibrary;
+			sourceTree = "<group>";
+		};
+		68911B292369D22D0088827D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +300,23 @@
 			productReference = 68911B0F2369C54F0088827D /* Core.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		68911B212369D15F0088827D /* StaticLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68911B282369D15F0088827D /* Build configuration list for PBXNativeTarget "StaticLibrary" */;
+			buildPhases = (
+				68911B1E2369D15F0088827D /* Sources */,
+				68911B1F2369D15F0088827D /* Frameworks */,
+				68911B202369D15F0088827D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StaticLibrary;
+			productName = StaticLibrary;
+			productReference = 68911B222369D15F0088827D /* libStaticLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -286,6 +342,9 @@
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
 					};
+					68911B212369D15F0088827D = {
+						CreatedOnToolsVersion = 10.3;
+					};
 				};
 			};
 			buildConfigurationList = 68911AD42369C4EE0088827D /* Build configuration list for PBXProject "GeneratingXcodeProjPlayground" */;
@@ -305,6 +364,7 @@
 				68911AEC2369C4F00088827D /* GeneratingXcodeProjPlaygroundTests */,
 				68911AF72369C4F00088827D /* GeneratingXcodeProjPlaygroundUITests */,
 				68911B0E2369C54F0088827D /* Core */,
+				68911B212369D15F0088827D /* StaticLibrary */,
 			);
 		};
 /* End PBXProject section */
@@ -374,6 +434,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				68911B1D2369C5680088827D /* NetworkClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68911B1E2369D15F0088827D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68911B252369D15F0088827D /* StaticLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +772,30 @@
 			};
 			name = Release;
 		};
+		68911B262369D15F0088827D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68911B272369D15F0088827D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -748,6 +840,15 @@
 			buildConfigurations = (
 				68911B192369C54F0088827D /* Debug */,
 				68911B1A2369C54F0088827D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68911B282369D15F0088827D /* Build configuration list for PBXNativeTarget "StaticLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68911B262369D15F0088827D /* Debug */,
+				68911B272369D15F0088827D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
