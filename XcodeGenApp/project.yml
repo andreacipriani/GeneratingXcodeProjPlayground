@@ -1,0 +1,23 @@
+name: XcodeGenProject
+options:
+  bundleIdPrefix: it.andreacipriani
+targets:
+  XcodeGenApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: 
+      - Sources/
+    settings:
+      configs:
+        debug:
+          CUSTOM_BUILD_SETTING: my_debug_value
+        release:
+          CUSTOM_BUILD_SETTING: my_release_value
+    dependencies:
+      - target: Core
+  Core:
+    type: framework
+    platform: iOS
+    sources:
+      - Core/
